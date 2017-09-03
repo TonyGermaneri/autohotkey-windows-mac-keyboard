@@ -72,11 +72,18 @@ F19::Run https://facebook.com
 ; Finding
 #f::Send ^f
 
+; Find again
+#g::Send {F3}
+
+; Find backwards
+#+g::Send +{F3}
+
 ; Undo
 #z::^z
 
 ; Redo
 #y::^y
+#+z::Send ^+z
 
 ; New tab
 #t::^t
@@ -146,6 +153,20 @@ Lwin & Tab::AltTab
 ; Map Alt + 3 to #
 !3::SendInput {#}
 
+; --------------------------------------------------------------
+; Arrow keys
+; --------------------------------------------------------------
+
+
+#Right::Send {End}
+#Left::Send {Home}
+#Up::Send ^{Home}
+#Down::Send ^{End}
+#!j::Send !+i
+#+Right::Send +{End}
+#+Left::Send +{Home}
+#+Up::Send +^{End}
+#+Down::Send +^{Home}
 
 
 ; --------------------------------------------------------------
